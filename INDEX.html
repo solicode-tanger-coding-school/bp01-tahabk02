@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pays du Monde Arabe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .country-section {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .country-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .image-grid img {
+            width: calc(20% - 10px);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+             width: 100%;
+             border-collapse: collapse;
+             margin-top: 10px;
+        }
+        th, td {
+             padding: 10px;
+             text-align: left;
+             border: 1px solid #ccc;
+         }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        button {
+             background-color: #28a745; 
+             color: white; 
+             border: none; 
+             border-radius: 5px; 
+             padding: 10px 20px; /* Padding  tt*/
+             cursor: pointer; /* Pointer cursor */
+             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+             transition: background-color 0.3s, transform 0.3s; 
+        }
+
+         button:hover {
+             background-color: #218838; 
+             transform: translateY(-2px); 
+         }
+
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Découvrez des Pays du Monde Arabe</h1>
+    <input type="text" id="search-input" placeholder="Rechercher un pays..." oninput="filterCountries()" style="margin-top: 10px; padding: 5px; width: 80%;">
+</header>
+
+<div class="country-section">
+    <h2 style="color: red;">Maroc</h2>
+    <div class="image-grid">
+        <img src="marrakech.jpg" alt="Marrakech"> 
+        <img src="fés.jpg" alt="Fès">
+        <img src="casablanca.jpg" alt="Casablanca">
+        <img src="rabat.jpg" alt="Rabat">
+        <img src="chefchaouen.jpg" alt="Chefchaouen">
+    </div>
+    <ol>
+        <li>Marrakech</li>
+        <li>Fès</li>
+        <li>Casablanca</li>
+        <li>Rabat</li>
+        <li>Chefchaouen</li>
+    </ol>
+    <p>Le Maroc est connu pour sa culture riche, ses paysages variés et ses villes historiques.</p>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Marrakech</td>
+            <td>1,0 M</td>
+        </tr>
+        <tr>
+            <td>Fès</td>
+            <td>1,2 M</td>
+        </tr>
+    </table>
+    <br>
+    <button id="like-button">like</button>
+    <br>
+    <p id="liks-maroc">0 liks</p>
+
+   
+
+</div>
+
+<div class="country-section">
+    <h2 style="color: green;">Pales<span style="color: red;">tine</span></h2>
+    <div class="image-grid">
+        <img src=".jpg" alt="">
+        <img src=".jpg" alt="">
+        <img src="naplouse.jpg" alt="Naplouse">
+        <img src="ramallah.jpg" alt="Ramallah">
+        <img src="gaza.jpg" alt="Gaza">
+    </div>
+    <p>La Palestine est riche en histoire et en culture, avec des sites historiques notables.</p>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Jérusalem</td>
+            <td>900 K</td>
+        </tr>
+        <tr>
+            <td>Bethléem</td>
+            <td>30 K</td>
+        </tr>
+    </table>
+    <br>
+    
+</div>
+
+<div class="country-section">
+    <h2>Arabie Saoudite</h2>
+    <div class="image-grid">
+        <img src="mecca.jpg" alt="La Mecque">
+        <img src="medina.jpg" alt="Médine">
+        <img src="riyadh.jpg" alt="Riyad">
+        <img src="jeddah.jpg" alt="Djeddah">
+        <img src="dammam.jpg" alt="Dammam">
+    </div>
+    <p>L'Arabie Saoudite est le berceau de l'islam, avec des villes saintes célèbres.</p>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Riyad</td>
+            <td>7,6 M</td>
+        </tr>
+        <tr>
+            <td>Jeddah</td>
+            <td>4,3 M</td>
+        </tr>
+    </table>
+    <br>
+ 
+</div>
+
+<div class="country-section">
+    <h2>Irak</h2>
+    <div class="image-grid">
+        <img src="baghdad.jpg" alt="Bagdad">
+        <img src="basra.jpg" alt="Bassorah">
+        <img src="mosul.jpg" alt="Mossoul">
+        <img src="karbala.jpg" alt="Karbala">
+        <img src="najaf.jpg" alt="Najaf">
+    </div>
+    <p>L'Irak est connu pour ses vestiges archéologiques et son histoire ancienne.</p>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Bagdad</td>
+            <td>8,9 M</td>
+        </tr>
+        <tr>
+            <td>Mossoul</td>
+            <td>1,5 M</td>
+        </tr>
+    </table>
+    <br>
+
+</div>
+
+<div class="country-section">
+    <h2>Égypte</h2>
+    <div class="image-grid">
+        <img src="cairo.jpg" alt="Le Caire">
+        <img src="alexandria.jpg" alt="Alexandrie">
+        <img src="luxor.jpg" alt="Louxor">
+        <img src="assiout.jpg" alt="Assiout">
+        <img src="giza.jpg" alt="Gizeh">
+    </div>
+    <p>L'Égypte est célèbre pour ses pyramides et son histoire pharaonique.</p>
+    <table>
+        <tr>
+            <th>Ville</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>Le Caire</td>
+            <td>9,5 M</td>
+        </tr>
+        <tr>
+            <td>Alexandrie</td>
+            <td>5,5 M</td>
+        </tr>
+    </table>
+    
+</div>
+
+<script>
+
+function filterCountries() {
+        const searchInput = document.getElementById('search-input').value.toLowerCase();
+        const countrySections = document.querySelectorAll('.country-section');
+
+        countrySections.forEach(section => {
+            const countryName = section.querySelector('h2').innerText.toLowerCase();
+            if (countryName.includes(searchInput)) {
+                section.style.display = ''; 
+            } else {
+                section.style.display = 'none'; 
+            }
+        });
+    }
+    let likesMaroc = 0;
+
+    document.getElementById("like-button").addEventListener("click", function() {
+    likesMaroc++;
+    document.getElementById("liks-maroc").innerText = likesMaroc + " liks";
+});
+</script>
+</body>
+</html>
