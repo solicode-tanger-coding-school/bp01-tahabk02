@@ -239,26 +239,26 @@
 </div>
 
 <script>
-
-function filterCountries() {
+    function filterCountries() {
         const searchInput = document.getElementById('search-input').value.toLowerCase();
         const countrySections = document.querySelectorAll('.country-section');
-
+    
         countrySections.forEach(section => {
             const countryName = section.querySelector('h2').innerText.toLowerCase();
-            if (countryName.includes(searchInput)) {
-                section.style.display = ''; 
-            } else {
-                section.style.display = 'none'; 
-            }
+            section.style.display = countryName.includes(searchInput) ? '' : 'none'; 
         });
     }
-    let likesMaroc = 0;
-
-    document.getElementById("like-button").addEventListener("click", function() {
-    likesMaroc++;
-    document.getElementById("liks-maroc").innerText = likesMaroc + " liks";
-});
-</script>
+    
+    document.querySelectorAll('button[id^="like-button-"]').forEach(button => {
+        button.addEventListener('click', () => {
+            const countryId = button.id.split('-')[2];
+            const likesElement = document.getElementById(`likes-${countryId}`);
+            let likesCount = parseInt(likesElement.innerText) || 0;
+            likesCount++;
+            likesElement.innerText = `${likesCount} likes`;
+        });
+    });
+    </script>
 </body>
 </html>
+    
